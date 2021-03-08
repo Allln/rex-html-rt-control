@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+    RSlunecnice
+    </title>
+
+    <script type="text/javascript" src="js/rexhmi-vendor.min.js">
+    </script>
+    <script type="text/javascript" src="js/rexhmi.min.js">
+    </script>
+    <script type="text/javascript" src="js/sf.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">  
+    
+</head>
+<body>
+    <div id="title">
+        RSlunecnice
+    </div>
+    <div id="login info">
+            <tr>
+                <td>User
+                </td>
+                    <div>  
+                    </div>
+                        <form id="logout_button" action="/logout" method="POST">
+                            <button type="submit">logout
+                            </button>
+                        </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Refresh rate
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>URL
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            </td>
+        </div>
+        <div id="log">
+            <table>
+            </table>
+        </div>
+    <main id="main window">
+            <div> Position control
+            </div>
+            <tr width = "50%">
+                <form oninput="x.value = pd.value"> Top view from: 0
+                    <input type = "range" id="pd" min="0" max="1" value="0" step="0.1">to: 1
+                    <br/>
+                    <output name = "x" for="pd">
+                    </output>
+                </form>
+                <canvas id="canvas1" width="250" height=250>
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+            </tr>
+            <tr width = "50%">
+                <form oninput="x.value=ph.value"> Side view from: -1
+                    <input type = "range" id="ph" min="-1" max="1" value="0.5" step="0.1"> To: 1
+                    <br/>
+                    <output name = "x" for="ph">
+                    </output>
+                </form>
+                <canvas id="canvas" width="250" height=250>
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+            </tr>
+            <table border="15"width="25%" align = "center">
+                <td width = "100%" align="center">
+                    <input id = "restart" type = "button" value = "reset" >
+                    <br/>
+                </td>
+            </table>
+            <div> Speed control
+            </div>
+            <td align="center">
+                <form oninput="x.value=rh.value"> From: 0
+                    <input type="range" id="rh" min="0" max="4" step="1" value="0"> To: 4
+                    <br />
+                    <output name="x" for="rh">
+                    </output>
+                </form>
+            </td>
+            <td align="center">
+                <form oninput="x.value=rd.value"> From: 0
+                    <input type="range" id="rd" min="0" max="4" step="1" value="0"> To: 4
+                    <br/>
+                    <output name="x" for="rd"></output>
+                </form>
+            </td>
+            <table border="15" width="25%" align = "center">
+                <td width = "100%" align="center">
+                    <input id="val-0" type="radio" name="radio" checked/>
+                    <label for="val-0">Auto
+                    </label>
+                    <input id="val-1" type="radio" name="radio"/>
+                    <label for="val-1">Man
+                    </label>
+                </td>
+            </table> 
+            <div>
+            </div>
+            <div>
+                Senzor I
+            </div>
+            <div>
+                <label for="s1rv"></label>0%
+                <progress id="s1rv" name="s1rv" max="1000" value="500">
+                </progress>100%
+            </div>
+            <div>
+                Senzor II
+            </div>
+            <div>
+                <label for="s2rv"></label>0%
+                <progress id="s2rv" name="s2rv" max="1000" value="500">
+            </progress>100%
+            </div>
+            <div>
+                Senzor III
+            </div>
+            <div>
+                <label for="s3rv"></label>0%
+                <progress id="s3rv" name="s3rv" max="1000" value="500">
+                </progress>100%
+            </div>
+    </main>
+    </div>
+</body>
+</html>
